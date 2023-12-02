@@ -66,13 +66,15 @@ int firstDigit(std::string& str)
     {
         if (std::isdigit(str.at(i)))
         {
-            // std::cout << i << " " << str.at(i) << std::endl;
             firstDigitIndex = i;
             break;
         }
     }
 
     auto&& [strDigitIndex, strDigitValue] = getFirstStringDigit(str);
+    if (strDigitIndex == -1)
+        return str.at(firstDigitIndex) - 48;
+
     if (firstDigitIndex < strDigitIndex)
         return str.at(firstDigitIndex) - 48;
 
@@ -104,7 +106,8 @@ int getFirstLastNumCombination(std::string& str)
 {
     int first_digit = firstDigit(str);
     int second_digit = secondDigit(str);
-    return first_digit * 10 + second_digit;
+    int result = first_digit * 10 + second_digit;
+    return result;
 }
 
 int solve()
@@ -123,12 +126,6 @@ int solve()
 
 int main()
 {
-    std::string str = "4nineeightseven2";
+    std::string str = "cplmhhrlh5";
     std::cout << solve() << std::endl;
-    // std::cout << firstDigit(str) << std::endl;
-    // int s = secondDigit(str);
-    // std::cout << s << std::endl;
-
-    // auto&& [i, val] = getFirstStringDigit(str);
-    // std::cout << i << " " << val << std::endl;
 }
