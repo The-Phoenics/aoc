@@ -1,0 +1,33 @@
+#include <vector>
+#include <string>
+#include <array>
+#include <cmath>
+#include <iostream>
+#include <algorithm>
+
+#include "../Utils.hpp"
+
+// https://www.geeksforgeeks.org/recursive-programs-to-find-minimum-and-maximum-elements-of-array/
+
+#define PRINTING_PROBLEM 1
+
+using namespace std;
+
+void solver(vector<int>& nums)
+{
+    return;
+}
+
+void Solution()
+{
+    vector<int> input = {1, 2, 3, 4, 5};
+    cout << "Input: \n";
+    print(input);
+
+    cout << "Output: \n";
+#if PRINTING_PROBLEM
+    solver(input);
+#else
+    print(solver(input));
+#endif
+}

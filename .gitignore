@@ -1,8 +1,6 @@
-.vscode/*
-.vscode
-
 *.out
+*.a
+*.so
+*.exe
 main
-
-test.txt
-input.txt
+Solution
