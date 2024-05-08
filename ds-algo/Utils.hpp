@@ -40,11 +40,13 @@ void print(const std::array<T, size>& value) {
 	std::cout << "]\n";
 }
 
-void print(void) {}
-void print(int n)    { std::cout << n << std::endl; }
-void print(float n)  { std::cout << n << std::endl; }
-void print(double n) { std::cout << n << std::endl; }
+void print(std::string n) { std::cout << n << std::endl; }
+void print(char n)        { std::cout << n << std::endl; }
+void print(int n)    	  { std::cout << n << std::endl; }
+void print(float n)  	  { std::cout << n << std::endl; }
+void print(double n) 	  { std::cout << n << std::endl; }
 
 void print(bool n)
 {
-	std::cout << n ? std::cout << "true" << std::endl : std::cout << "false" << std::endl; }
+	std::cout << n ? std::cout << "true" << std::endl : std::cout << "false" << std::endl;
+}

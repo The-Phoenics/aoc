@@ -22,11 +22,11 @@ OUT_FILE_NAME=Solution
 g++ -g main.cpp "$SOURCE_FILE" -o "$OUT_FILE_NAME"
 
 # Check if compilation was successful
-if [ $? -eq 0 ]; then
-  echo ""
-else
-  echo "Compilation failed.\n"
-  exit 1
-fi
+# if [ $? -eq 0 ]; then
+#   echo "Compilation successful\n"
+# else
+#   echo "Compilation failed.\n"
+#   exit 1
+# fi
 
 ./"$OUT_FILE_NAME"

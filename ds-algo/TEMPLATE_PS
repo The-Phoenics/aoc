@@ -7,9 +7,9 @@
 
 #include "../Utils.hpp"
 
-// https://www.geeksforgeeks.org/recursive-programs-to-find-minimum-and-maximum-elements-of-array/
+// <problem-link>
 
-#define PRINTING_PROBLEM 1
+#define VOID_FUNCTION 0
 
 using namespace std;
 
@@ -21,11 +21,11 @@ void solver(vector<int>& nums)
 void Solution()
 {
     vector<int> input = {1, 2, 3, 4, 5};
-    cout << "Input: \n";
+    cout << "Input: ";
     print(input);
 
-    cout << "Output: \n";
-#if PRINTING_PROBLEM
+    cout << "Output: ";
+#if VOID_FUNCTION
     solver(input);
 #else
     print(solver(input));
