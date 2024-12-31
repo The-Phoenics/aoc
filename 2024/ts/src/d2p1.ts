@@ -1,14 +1,4 @@
-const { readFile } = require('node:fs/promises')
-
-async function getInputStr(filepath: string) {
-    let inputStr;
-    try {
-        inputStr = await readFile(filepath, { encoding: 'utf8' })
-    } catch (err) {
-        throw err;
-    }
-    return inputStr;
-}
+import { getInputStr } from "./helper";
 
 function isSafe(report: number[]): number {
     // 1 for safe, 0 for unsafe report
@@ -32,7 +22,6 @@ function solve(inputStr: string) {
     const reports: string[] = inputStr.split('\n');
     for (let report of reports) {
         if (report !== "") {
-            console.log(report)
             const levels: string[] = report.split(" ");
             let reportInt: number[] = [];
             for (let level of levels) {
