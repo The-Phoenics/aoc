@@ -11,7 +11,7 @@ inline void operator<<(std::ostream& os, std::vector<int>& data) {
     for (int i: data) {
         os << i << " "; 
     }
-    std::cout << "]";
+    std::cout << "]\n";
 }
 
 inline void print(bool b) {
